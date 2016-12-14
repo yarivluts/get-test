@@ -1,0 +1,21 @@
+<h1><%= @title %></h1>
+<form action="/ajax.php" method="post">
+    <input type="hidden" name="action" value="search" />
+    <div class="form-group">
+        <label for="q">Serach</label>
+        <select  class="form-control"   id="search_type" name="type">
+          <option value="driver_name">Driver</option>
+          <option value="metric_name">Metric Name</option>
+          <select>
+        <input id="q" class="form-control"  placeholder="Enter Driver Or Metirc Name" type="text" name="q" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div class="result-warp" >
+  <div id="map_warp" >
+       <div id="map_canvas" ></div>
+   </div>
+</div>
+<div class="loader-warp">
+<div class="loader"></div>
+</div>
